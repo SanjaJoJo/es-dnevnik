@@ -2,6 +2,8 @@ package com.ikt.t99.controllers;
 
 import javax.validation.Valid;
 
+
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,15 +28,15 @@ import com.ikt.t99.services.NastavnikService;
 @RequestMapping(value = "/api/v1/nastavnici")
 public class NastavnikController {
 
-	private final Logger logger = LoggerFactory.getLogger(NastavnikController.class);
+	//private final Logger logger = LoggerFactory.getLogger(NastavnikController.class);
 
 	@Autowired
 	private NastavnikRepository nastavnikRepository;
-	@Autowired
-	private NastavnikService nastavnikService;
+	//@Autowired
+	//private NastavnikService nastavnikService;
 
 	// Create
-	@PostMapping
+	/*
 	public ResponseEntity<?> create(@Valid @RequestBody NastavnikDTO nastavnikDTO) {
 		logger.info("Pozvana metoda create() sa NastavnikDTO objektom: {}", nastavnikDTO);
 	    return nastavnikService.create(nastavnikDTO);
@@ -55,15 +57,15 @@ public class NastavnikController {
 	}
 
 	// Delete
-	@DeleteMapping("/{id}")
+/*	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable Long id) {
 		logger.info("Pozvana metoda delete() sa id: {}", id);
-		return nastavnikService.delete(id);
-	}
+		return nastavnikService.delete(id);*/
+	//}
 	// ----------------------------------------------------------------------------------------------------
 
 	// List
-	@GetMapping
+	/*@GetMapping
 	public ResponseEntity<?> list() {
 		logger.info("Pozvana metoda list()");
 	    return ResponseEntity.status(HttpStatus.OK).body(nastavnikRepository.findAll());
@@ -77,9 +79,9 @@ public class NastavnikController {
 	}
 	
 	// Create dummy data
-	@PostMapping("/dummy/{count}")
+	/*@PostMapping("/dummy/{count}")
 	public ResponseEntity<?> dummy(@PathVariable Integer count) {
 		logger.info("Pozvana metoda dummy() sa brojem: {}", count);
 	    return nastavnikService.dummy(count);
-	}
+	}*/
 }

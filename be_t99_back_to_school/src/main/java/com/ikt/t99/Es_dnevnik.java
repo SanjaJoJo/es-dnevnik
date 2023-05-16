@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BeT99BackToSchoolApplication {
+public class Es_dnevnik {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BeT99BackToSchoolApplication.class, args);
+		SpringApplication.run(Es_dnevnik.class, args);
 	}
 
 }
